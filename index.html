@@ -1,1 +1,32 @@
-Hello, world.
+<html>
+<head>
+  <title>deep link test</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon-precomposed" href="https://other.chat/icon.png">
+  <link rel="apple-touch-startup-image" media="(orientation: landscape)" href="https://other.chat/icon.png"/>
+<link rel="apple-touch-startup-image" media="(orientation: portrait)" href="https://other.chat/icon.png"/>
+</head>
+<body>
+  <a id="jump" href="other-chat://other.chat/channel/CHANNEL_REMOTE_ID"></a>
+  <div id="icon" style="margin:auto; width:250px; height:250px; position:absolute; top:0; left:0; bottom:0; right:0; border-radius:30px">
+    <img src="https://other.chat/icon.png" style="margin:auto; position:absolute; width:136.667px; height:136.667px; top:0; left:0; bottom:0; right:0;"></img>
+  </div>
+  <script type="text/javascript">
+  if (window.navigator.standalone) {
+      console.log("standalone")
+  } else {
+      // do nothing
+  }
+    
+console.log("foo")
+var e = document.getElementById('jump');
+var ev = document.createEvent('MouseEvents');
+ev.initEvent('click',true,true,document.defaultView,1,0,0,0,0,false,false,false,false,0,null);
+setTimeout(function() { e.dispatchEvent(ev); }, 25);
+
+  </script>
+</body>
+</html>
