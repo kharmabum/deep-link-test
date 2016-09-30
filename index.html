@@ -51,8 +51,9 @@ var event = new MouseEvent('click', {
 });
     
 var link = document.getElementById('uri-link'); 
+// setTimeout(function() { link.dispatchEvent(event); }, 25);
+setTimeout(function() { window.location = "https://other.chat/invite/foo" }, 25);
+
   </script>
 </body>
 </html>
-// setTimeout(function() { link.dispatchEvent(event); }, 25);
-// setTimeout(function() { window.location = "https://other.chat/invite/foo" }, 25);
