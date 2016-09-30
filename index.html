@@ -43,22 +43,14 @@ function readCookie(name) {
 function eraseCookie(name) {
     createCookie(name,"",-1);
 }
-
-if (window.navigator.standalone) {
-  console.log("standalone")
-} else {
-  // do nothing
-}
     
-console.log("foo")
-
-var event = new MouseEvent('click', {
-    'view': window,
-    'bubbles': true,
-    'cancelable': false
-});
-var link = document.getElementById('deep-link'); 
-setTimeout(function() { link.dispatchEvent(event); }, 100);
+// var event = new MouseEvent('click', {
+//     'view': window,
+//     'bubbles': true,
+//     'cancelable': false
+// });
+// var link = document.getElementById('deep-link'); 
+// setTimeout(function() { link.dispatchEvent(event); }, 100);
 
   </script>
 </body>
