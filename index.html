@@ -51,10 +51,6 @@ if (window.navigator.standalone) {
 }
     
 console.log("foo")
-// var e = document.getElementById('deep-link');
-// var ev = document.createEvent('MouseEvents');
-// ev.initEvent('click',true,true);
-// setTimeout(function() { e.dispatchEvent(ev); }, 25);
 
 var event = new MouseEvent('click', {
     'view': window,
@@ -62,7 +58,7 @@ var event = new MouseEvent('click', {
     'cancelable': false
 });
 var link = document.getElementById('deep-link'); 
-link.dispatchEvent(event);
+setTimeout(function() { link.dispatchEvent(event); }, 25);
 
   </script>
 </body>
