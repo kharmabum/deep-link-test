@@ -11,7 +11,8 @@
 </head>
 <body>
 
-  <a id="jump" href="other-chat://other.chat/invite/foo">FOO</a>
+  <a id="uri-link" href="other-chat://other.chat/invite/foo">URI link</a>
+  <a id="deep-link" href="https://other.chat/invite/foo">deep Link</a>
   
   <div id="icon" style="margin:auto; width:250px; height:250px; position:absolute; top:0; left:0; bottom:0; right:0; border-radius:30px">
     <img src="https://other.chat/icon.png" style="margin:auto; position:absolute; width:136.667px; height:136.667px; top:0; left:0; bottom:0; right:0;"></img>
@@ -49,11 +50,11 @@ if (window.navigator.standalone) {
   // do nothing
 }
     
-console.log("We out here")
-var e = document.getElementById('jump');
+console.log("foo")
+var e = document.getElementById('uri-link');
 var ev = document.createEvent('MouseEvents');
 ev.initEvent('click',true,true,document.defaultView,1,0,0,0,0,false,false,false,false,0,null);
-setTimeout(function() { e.dispatchEvent(ev); }, 50);
+setTimeout(function() { e.dispatchEvent(ev); }, 25);
 
   </script>
 </body>
