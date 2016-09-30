@@ -51,10 +51,18 @@ if (window.navigator.standalone) {
 }
     
 console.log("foo")
-var e = document.getElementById('deep-link');
-var ev = document.createEvent('MouseEvents');
-ev.initEvent('click',true,true,document.defaultView,1,0,0,0,0,false,false,false,false,0,null);
-setTimeout(function() { e.dispatchEvent(ev); }, 25);
+// var e = document.getElementById('deep-link');
+// var ev = document.createEvent('MouseEvents');
+// ev.initEvent('click',true,true);
+// setTimeout(function() { e.dispatchEvent(ev); }, 25);
+
+var event = new MouseEvent('click', {
+    'view': window,
+    'bubbles': true,
+    'cancelable': false
+});
+var link = document.getElementById('deep-link'); 
+link.dispatchEvent(event);
 
   </script>
 </body>
